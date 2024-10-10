@@ -5,11 +5,10 @@ public abstract class Kämpfer {
 
     public Kämpfer(String name) {
         this.name = name;
-        this.lebenspunkte = 100; // Start mit 100 Lebenspunkten
+        this.lebenspunkte = 100;
         this.spezialfähigkeitAktiv = false;
     }
 
-    // Getter und Setter
     public String getName() {
         return name;
     }
@@ -30,14 +29,15 @@ public abstract class Kämpfer {
         this.spezialfähigkeitAktiv = spezialfaehigkeitAktiv;
     }
 
-    // Methode, um Schaden zu nehmen
+
     public void schadenNehmen(int punkte) {
-        setLebenspunkte(lebenspunkte - punkte); // Lebenspunkte reduzieren
+        setLebenspunkte(lebenspunkte - punkte);
         if (lebenspunkte == 0) {
             System.out.println(name + " wurde besiegt!");
         }
     }
+    public abstract void spezialfaehigkeitAktivieren();
+    public abstract void spezialfaehigkeitDeaktivieren();
 
-    // Abstrakte Methode für Angriff (muss in Unterklassen implementiert werden)
     public abstract void angreifen(Kämpfer gegner);
 }
