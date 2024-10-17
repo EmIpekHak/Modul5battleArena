@@ -12,6 +12,9 @@ public class Zwerge extends Kämpfer{
         if(!isSpezialfaehigkeitAktiv()&&getLebenspunkte()<50){
             setSpezialfaehigkeitAktiv(true);
             System.out.println("Hat die Spezialfähigkeit aktiviert.");
+        }else{
+            setSpezialfaehigkeitAktiv(false);
+            System.out.println("Du erfüllst die Anforderungen nicht");
         }
     }
 

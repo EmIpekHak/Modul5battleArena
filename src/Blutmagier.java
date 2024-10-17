@@ -14,8 +14,11 @@ public class Blutmagier extends Kämpfer {
         if(!isSpezialfaehigkeitAktiv()&&getLebenspunkte()>50){
             setSpezialfaehigkeitAktiv(true);
             setLebenspunkte(getLebenspunkte()/2);
-            System.out.println(getName() + " hat die Spezialfaehigkeit aktiviert.");
+            System.out.println("Hat die Spezialfaehigkeit aktiviert.");
 
+        }else{
+            setSpezialfaehigkeitAktiv(false);
+            System.out.println("Du erfüllst die Anforderungen nicht");
         }
     }
 
@@ -23,7 +26,7 @@ public class Blutmagier extends Kämpfer {
     public void spezialfaehigkeitDeaktivieren() {
         if (isSpezialfaehigkeitAktiv()) {
             setSpezialfaehigkeitAktiv(false);
-            System.out.println(getName() + " hat die Spezialfaehigkeit deaktiviert.");
+            System.out.println("Hat die Spezialfaehigkeit deaktiviert.");
         }
 
     }
