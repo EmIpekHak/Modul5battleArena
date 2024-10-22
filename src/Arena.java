@@ -1,23 +1,25 @@
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Arena {
-    Scanner scanner = new Scanner(System.in);
-    Random rand = new Random();
-    private Kämpfer kämpfer1;
-    private Kämpfer kämpfer2;
-    private Kämpfer kämpfer3;
-    private Kämpfer gewinner = null;
+    private ArrayList<Kämpfer> kaempfer;
 
-    public Arena(Scanner scanner, Random rand, Kämpfer kämpfer1, Kämpfer kämpfer2, Kämpfer kämpfer3, Kämpfer gewinner) {
-        this.scanner = scanner;
-        this.rand = rand;
-        this.kämpfer1 = kämpfer1;
-        this.kämpfer2 = kämpfer2;
-        this.kämpfer3 = kämpfer3;
-        this.gewinner = gewinner;
+    public Arena(ArrayList<Kämpfer> kaempfer) {
+        this.kaempfer = kaempfer;
     }
-    public void Fight(){
+
+    public Arena(){
+        this.kaempfer = new ArrayList<>();
+    }
+
+    public void kaempferHinzufügen(Kämpfer kämpfer){
+        this.kaempfer.add(kämpfer);
+    }
+    public void fight(){
+        int start = new Random().nextInt(this.kaempfer.size());
+        Kämpfer kämpfer = this.kaempfer.get(start);
+
 
     }
 
