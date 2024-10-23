@@ -8,21 +8,21 @@ public class Drachen extends Kämpfer {
         random = new Random();
     }
 
-@Override
+    @Override
     public void angreifen(Kämpfer gegner) {
         int schaden = random.nextInt(6) + 20; // Schaden zwischen 20 und 25
         if (isSpezialfaehigkeitAktiv()) {
             int minus = random.nextInt(6) + 5; // Malus zwischen 5 und 10
             schaden -= minus;
         }
-        System.out.println(getName() + " greift an und verursacht " + schaden + " Schaden.");
+        System.out.print("Der Gegner hat: " + schaden + " Schaden genommen");
         gegner.schadenNehmen(schaden);
     }
 
     public void spezialfaehigkeitAktivieren() {
         if (!isSpezialfaehigkeitAktiv()) {
             setSpezialfaehigkeitAktiv(true);
-            setLebenspunkte(getLebenspunkte()+10); // 10 Lebenspunkte dazu
+            setLebenspunkte(getLebenspunkte() + 10); // 10 Lebenspunkte dazu
             System.out.println(getName() + " hat die Spezialfähigkeit Fliegen aktiviert.");
         }
     }

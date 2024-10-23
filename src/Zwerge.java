@@ -42,16 +42,16 @@ public class Zwerge extends Kämpfer {
             }
             if (random.nextDouble(1) <= erfolg) {
                 schaden *= 2;
-                System.out.print("Zwerg hat erfolgreich seinem Gegner eine Kopfnuss gegeben damit hat er: " + schaden + "hinzugefügt!");
+                System.out.print("Zwerg hat erfolgreich seinem Gegner eine Kopfnuss gegeben damit hat er : " + schaden + "Schaden hinzugefügt!");
             } else {
                 schaden /= 2;
-                System.out.print("Zwerg hat die Schulter des gegners mit der Kopfnuss getroffen deshalbt hat er nur: " + schaden + "gemacht");
+                System.out.print("Zwerg hat die Schulter des gegners mit der Kopfnuss getroffen deshalbt hat er nur : " + schaden + " Schaden gemacht");
             }
 
 
         }
         gegner.schadenNehmen(schaden);
-        System.out.print("Der Gegner hat:" + schaden + "genommen");
+        System.out.print("Der Gegner hat: " + schaden + " Schaden genommen");
     }
 
 

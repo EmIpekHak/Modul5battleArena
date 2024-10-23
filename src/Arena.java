@@ -21,13 +21,13 @@ public class Arena {
         Kämpfer kämpferanderreihe = x == 0 ? kämpfer1 : kämpfer2;
         Kämpfer gegner = x == 1 ? kämpfer1 : kämpfer2;
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Dieser Kämpfer startet: " + kämpferanderreihe.getName());
         String spielanleitung = """
                 1: Angreifen
                 2: Spezialfähigkeit aktivieren
                 3: Spezialfähigkeit deaktivieren
                 """;
         while (fightstart) {
+            System.out.println("Dieser Kämpfer startet: " + kämpferanderreihe.getName());
             System.out.println(spielanleitung);
             int eingabe = scanner.nextInt();
             switch (eingabe) {
@@ -43,6 +43,7 @@ public class Arena {
             System.out.println(gegner);
             if (gegner.getLebenspunkte() <= 0) {
                 gewinner = kämpferanderreihe;
+                System.out.println(gewinner.getName() + " hat gewonnen!!!!");
                 fightstart = false;
             }
             Kämpfer tempkämpfer = gegner;

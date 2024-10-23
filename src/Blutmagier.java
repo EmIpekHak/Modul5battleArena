@@ -38,7 +38,7 @@ public class Blutmagier extends Kämpfer {
 
         }
         gegner.schadenNehmen(schaden);
-        System.out.println(getName() + " hat angegriffen und:  " + schaden + " verursacht");
+        System.out.print("Der Gegner hat: " + schaden + " Schaden genommen");
     }
 
 
