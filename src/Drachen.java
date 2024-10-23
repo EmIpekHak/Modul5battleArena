@@ -22,7 +22,7 @@ public class Drachen extends Kämpfer {
     public void spezialfaehigkeitAktivieren() {
         if (!isSpezialfaehigkeitAktiv()) {
             setSpezialfaehigkeitAktiv(true);
-            setLebenspunkte(Math.min(100, getLebenspunkte() + 10)); // 10 Lebenspunkte dazu
+            setLebenspunkte(getLebenspunkte()+10); // 10 Lebenspunkte dazu
             System.out.println(getName() + " hat die Spezialfähigkeit Fliegen aktiviert.");
         }
     }

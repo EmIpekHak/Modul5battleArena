@@ -36,7 +36,18 @@ public abstract class Kämpfer {
             System.out.println(name + " wurde besiegt!");
         }
     }
+
+    @Override
+    public String toString() {
+        return "Kämpfer{" +
+                "name='" + name + '\'' +
+                ", lebenspunkte=" + lebenspunkte +
+                ", spezialfähigkeitAktiv=" + spezialfähigkeitAktiv +
+                '}';
+    }
+
     public abstract void spezialfaehigkeitAktivieren();
+
     public abstract void spezialfaehigkeitDeaktivieren();
 
     public abstract void angreifen(Kämpfer gegner);

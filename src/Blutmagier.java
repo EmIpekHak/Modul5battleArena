@@ -11,13 +11,12 @@ public class Blutmagier extends Kämpfer {
 
     @Override
     public void spezialfaehigkeitAktivieren() {
-        if(!isSpezialfaehigkeitAktiv()&&getLebenspunkte()>50){
+        if (!isSpezialfaehigkeitAktiv() && getLebenspunkte() > 50) {
             setSpezialfaehigkeitAktiv(true);
-            setLebenspunkte(getLebenspunkte()/2);
+            setLebenspunkte(getLebenspunkte() / 2);
             System.out.println("Hat die Spezialfaehigkeit aktiviert.");
 
-        }else{
-            setSpezialfaehigkeitAktiv(false);
+        } else {
             System.out.println("Du erfüllst die Anforderungen nicht");
         }
     }
@@ -33,11 +32,12 @@ public class Blutmagier extends Kämpfer {
 
     @Override
     public void angreifen(Kämpfer gegner) {
-        int schaden = random.nextInt(13)+18;
-        if (isSpezialfaehigkeitAktiv()){
-            schaden = schaden*2;
+        int schaden = random.nextInt(13) + 18;
+        if (isSpezialfaehigkeitAktiv()) {
+            schaden = schaden * 2;
 
         }
+        gegner.schadenNehmen(schaden);
         System.out.println(getName() + " hat angegriffen und:  " + schaden + " verursacht");
     }
 
